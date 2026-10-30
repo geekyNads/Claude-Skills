@@ -1,0 +1,6 @@
+[project]
+name = "internpilot"
+version = "0.1.0"
+description = "Local internship pipeline: find remote LinkedIn internships, score fit, auto-apply, reach out to hiring teams."
+requires-python = ">=3.11"
+dependencies = ["beautifulsoup4>=4.12", "playwright>=1.48"]

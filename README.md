@@ -64,3 +64,4 @@ Each skill kicks in automatically when you ask for what it covers, or call it by
 - `premium-ui-pass`: responsive, polished, SEO-ready UI
 - `work-mail`: reports and emails from real repo state
 - `security-war-room`: hacker vs white hat vs analyst before production
+- `internship-autopilot`: find, filter, auto-apply to LinkedIn internships, and reach out to job posters
