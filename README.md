@@ -1,15 +1,35 @@
 # Claude Skills
 
-Custom Claude Code skills. Each folder is one skill (`<name>/SKILL.md`).
+Custom Claude Code skills, organized as `domain/subdomain/skill/SKILL.md`.
 
 ## Install
 
 ```bash
 git clone https://github.com/geekyNads/Claude-Skills.git ~/Desktop/skills
-for d in ~/Desktop/skills/*/; do ln -sfn "$d" ~/.claude/skills/$(basename "$d"); done
+~/Desktop/skills/install.sh
 ```
 
-Restart Claude Code (or start a new session) and the skills appear in the list.
+Restart Claude Code (or start a new session) and the skills appear in the list. Skill names don't include the folders, so you still call them as `/ship-pr`.
+
+After every `git pull` that adds or moves a skill, run `install.sh` again. It links each skill flat into `~/.claude/skills`, because Claude Code only looks one level deep there.
+
+## Folder map
+
+| Domain | Subdomain | Skills |
+|---|---|---|
+| `foundations` | `onboarding` | `claude-onboarding`, `prompt-coach`, `claude-md-builder`, `codebase-tour` |
+| | `planning` | `idea-to-plan`, `stack-picker`, `build-in-slices` |
+| `engineering` | `frontend` | `landing-page-starter`, `design-to-code`, `premium-ui-pass`, `forms-that-work`, `accessibility-basics` |
+| | `backend` | `add-auth`, `add-database`, `connect-api`, `ai-feature-starter` |
+| | `troubleshooting` | `error-explainer`, `stuck-breaker`, `safe-undo`, `run-locally`, `dependency-doctor` |
+| `quality` | `review` | `vibe-check-review`, `first-tests`, `cleanup-pass`, `docs-compliance` |
+| | `security` | `secrets-guard`, `security-war-room` |
+| `delivery` | `git` | `git-basics-coach`, `ship-pr` |
+| | `release` | `deploy-first-app`, `launch-checklist`, `readme-writer` |
+| `workflow` | `sessions` | `token-saver`, `session-handoff` |
+| | `professional` | `work-mail`, `internship-autopilot` |
+
+New skill? Put it in the subdomain it fits, add it to this table, and run `install.sh`.
 
 ## New to Claude? Follow this path
 
